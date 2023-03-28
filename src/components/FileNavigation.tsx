@@ -1,17 +1,18 @@
-import { Box } from '@mui/material'
 import React from 'react'
 import { Item } from './styled'
 import { paths } from '../pageSettings'
 import { Link } from 'react-router-dom'
 import { Stack } from '@mui/system'
+import NavbarComponent from './NavbarComponent'
 
 const FileNavigation = () => {  
     return (
-        <Stack margin={0} sx={{display: "flex", alignContent: "center", flexDirection: "row", gap: 5, marginY: 4 }}>
+        <Stack margin={0} sx={{display: "flex", alignContent: "space-between", flexDirection: "row", gap: 1, marginBottom: 1 }}>
+            <NavbarComponent routerDir={window.location.pathname.slice(1).toUpperCase()}/>
             {paths.map((path, idx) => {
                 return(
-                    <Link to={path.value} style={{textDecoration: "none", color: "white"}}>
-                        <Item key={idx}>
+                    <Link key={idx} to={`${window.location.origin}/${path.value}`} style={{textDecoration: "none", color: "white"}}>
+                        <Item iconData={path.icon}>
                             {path.value.toUpperCase()}
                         </Item>
                     </Link>

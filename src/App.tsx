@@ -1,36 +1,29 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from 'react'
 
-import { FutureUpdates, NavbarComponent, FileNavigation, DataElement, PwdElement, ShadowElement } from './components'
-import "bootstrap/dist/js/bootstrap.bundle.min"
-import "./style/global.scss"
-import bgVideo from './assets/bg.mp4'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { MainElement, AboutElement, ShopElement } from './components';
 import { Box } from '@mui/system'
 
-const App = () => {
-  const [routeDir, setRouteDir] = useState('')
+import "bootstrap/dist/js/bootstrap.bundle.min"
+import "./style/global.scss"
 
-  useEffect(() => {
-    const pathname = window.location.pathname.slice(1).toUpperCase()
-    setRouteDir(pathname)
-  }, [window.location.pathname])
+import bgVideo from './assets/bg.mp4'
 
-  
+function App() {
+
   return (
     <BrowserRouter>
       <video autoPlay muted loop id='bgVideo'>
         <source src={bgVideo} type={'video/mp4'} />
       </video>
-      <Box id={'bgVideo'} sx={{background: '#AA0000', mixBlendMode:'darken'}}/>
-      <NavbarComponent routerDir={routeDir}/>
+      <Box id={'bgVideo'} sx={{ background: '#AA0000', mixBlendMode: 'darken' }} />
       <Routes>
-        <Route path="/" element={<FileNavigation />}/>
-        <Route path="/data" element={<DataElement />} />
-        <Route path="/pwd" element={<PwdElement />} />
-        <Route path="/shadow" element={<ShadowElement />} />
+        <Route path="/" element={<MainElement />} />
+        <Route path="/shop" element={<ShopElement />} />
+        <Route path="/about" element={<AboutElement />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App
