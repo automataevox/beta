@@ -6,7 +6,7 @@ interface CardProps {
 
 const Card = ({ children = null }: CardProps) => {
   return (
-    <div style={{padding: 2, fontWeight: "bold", background: "#111D", color: 'white', borderRadius: 4, display: "grid", gridTemplateRows: "1fr auto", minHeight: "5rem"}} id={"theCard"}>
+    <div style={{padding: 2, fontWeight: "bold", background: "#111D", color: 'white', borderRadius: 4, display: "grid", gridTemplateRows: "auto 1fr", minHeight: "5rem"}} id={"theCard"}>
       { children }
     </div>
   )

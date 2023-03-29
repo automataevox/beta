@@ -10,9 +10,11 @@ import "./style/global.scss"
 
 export const Redirect = ({ red }) => {
 
-  /*if(red == "code") window.location.replace("https://github.com/jaroslav-masa/beta")
-  if(red == "music") window.location.replace("https://open.spotify.com/artist/1Ngynwc6bFIKGzRcOrBAnx")*/
-
+  if(red == "code") window.location.replace("https://github.com/jaroslav-masa/beta")
+  if(red == "music") window.location.replace("https://open.spotify.com/artist/1Ngynwc6bFIKGzRcOrBAnx")
+  
+  window.location.reload
+  
   return(
     <div style={{display: "grid", placeItems: "center", height: "calc(100vh - 6.9rem)", width: "100%"}}>
       <Typography variant="body1" sx={{fontSize: '2rem', fontFamily: 'VT323'}}>

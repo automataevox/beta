@@ -8,12 +8,12 @@ import fallbackImage from '../assets/imageFallback.jpg'
 const MainElement = () => {
   return (
     <Card>
-      <div style={{display: "grid", placeItems: "center"}}>
+      <div style={{display: "grid", placeItems: "center", height: "3rem"}}>
           <Typography variant="body1" sx={{fontSize: '2rem', fontFamily: 'VT323'}}>
               Releases
           </Typography>
       </div>
-      <div style={{overflow: "auto"}}id={"contentBody"}>
+      <div style={{ overflow: "auto" }} id={"contentBody"}>
           <div style={{display: "grid", margin: "auto"}}>
               {releases.sort(function(a, b) {return b.id - a.id}).map((release, idx) => {
                   return (
