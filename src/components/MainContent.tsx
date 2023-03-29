@@ -22,11 +22,9 @@ const Content = () => {
                 
                 <Card>
                     <div style={{display: "grid", placeItems: "center", minHeight: "5rem"}}>
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7161282579203057" crossOrigin="anonymous"></script>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7161282579203057"
+     crossorigin="anonymous"></script>
                     
-                        <Typography variant="body1" sx={{fontSize: '1.2rem', fontFamily: 'VT323'}}>
-                            Oopsie... There should be an AD
-                        </Typography>
                     </div>
                 </Card>
 
