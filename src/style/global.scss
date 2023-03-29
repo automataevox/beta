@@ -17,3 +17,63 @@ body{
     min-height: 100%;
     z-index: -1;
 }
+
+#navBar {
+    grid-template-columns: auto 27rem;
+}
+
+#navIcons {
+    padding-left: 0.7rem;
+}
+
+#theCard {
+    max-height: calc(100vh - 7.1rem);
+}
+
+#contentParent {
+    grid-template-columns: auto 19.6rem;
+}
+
+#contentBody {
+    div {
+        
+        grid-template-columns: auto auto;
+    }
+}
+
+#contentBody::-webkit-scrollbar {
+    background: transparent;
+}
+
+@media screen and (max-width: 800px) {
+    #navBar {
+        grid-template-columns: auto;
+    }
+
+    #navIcons {
+        padding-left: 0rem;
+    }
+
+    #theCard {
+        max-height: calc(100vh - 12.3rem);
+    }
+   
+    #contentParent {
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    #contentBody {
+        div{
+            grid-template-columns: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #record {
+        flex-direction: column;
+        text-align: center;
+    }
+}

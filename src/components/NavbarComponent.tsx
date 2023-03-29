@@ -1,15 +1,16 @@
-import { Paper, Typography } from '@mui/material'
 import React from 'react'
-import { Box } from '@mui/system';
 
-const NavbarComponent = ({routerDir}) => {
-  // SET SM TO HAVE / IN TOP AND NAV UNDER 
+interface NavProps {
+  routerDir: string;
+  mb?: number;
+}
+
+const NavbarComponent = ({routerDir, mb = 0}: NavProps) => {
   return (
-    <Paper sx={{padding: 2, backdropFilter: 'blur(5px)', background: '#111D', color: '#fff', minWidth: "3.25rem", alignItems: "center", display: "flex"}}> 
-      <Box sx={{fontSize: '2rem', fontFamily: 'VT323'}}>
-          {`/${routerDir ? `${routerDir}` : ""}`}
-      </Box>
-    </Paper>
+    <div style={{fontFamily: 'VT323', fontSize: '2rem', background: '#111D',  borderRadius: 5, padding: "1.25rem", display: "flex", alignItems: "center", marginBottom: mb, minWidth: "6rem"}}> 
+          {/*`/${routerDir ? `${routerDir}` : ""}`*/}
+          DXVIL
+    </div>
   )
 }
 

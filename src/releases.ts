@@ -6,6 +6,11 @@ export const releases = [
     { image: 'https://i.scdn.co/image/ab67616d0000b27366871fd7be9da1a241656532', releaseName: 'Noise', artists: [ { name: "DXVIL" } ], releaseDate: new Date("February 5, 2021"), id: 5 },
     { image: 'https://i.scdn.co/image/ab67616d00001e02bcd15539aae519cc7fdddc11', releaseName: 'Flower', artists: [ { name: "DXVIL" } ], releaseDate: new Date("June 7, 2021"), id: 6 },
     { image: 'https://i.scdn.co/image/ab67616d0000b273955a89183bb067bc27d34029', releaseName: 'My Rise', artists: [ { name: "DXVIL" } ], releaseDate: new Date("July 9, 2021"), id: 7 },
-    { image: 'https://i.scdn.co/image/ab67616d0000b273096ffc47b328a7a41d6d6bb3', releaseName: 'Broken Memory', artists: [ { name: "DXVIL" } ], releaseDate: new Date("December 23, 2022"), id: 8 }
+    { image: 'https://i.scdn.co/image/ab67616d0000b273096ffc47b328a7a41d6d6bb3', releaseName: 'Broken Memory', artists: [ { name: "DXVIL" } ], releaseDate: new Date("December 23, 2022"), id: 8 },
+    { image: '', releaseName: 'Sulfoxide', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 9 },
+    { image: '', releaseName: 'Emotet', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 10 },
+    { image: '', releaseName: 'Echobot', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 11 },
+    { image: '', releaseName: 'RobbinHood', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 12 },
+    { image: '', releaseName: 'Astaroth', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 13 }
     //{ image: '', releaseName: '', artists: [ { name: "DXVIL" } ], releaseDate: new Date(""), id: 9 },
 ] 

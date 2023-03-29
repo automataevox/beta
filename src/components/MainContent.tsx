@@ -1,42 +1,44 @@
-import { Box, Typography } from '@mui/material'
-import { Stack } from '@mui/system'
+import { Typography } from '@mui/material'
 import React from 'react'
 import { Card } from './styled'
-import { releases } from '../releases'
+import { Navigate, Route, Routes } from 'react-router'
+import MainElement from './MainElement'
+import AboutElement from './AboutElement'
+import { Redirect } from '../App'
+
 const Content = () => {
 
     return (
-        <Stack sx={{display: 'flex', flexDirection: 'row', gap: 1, minWidth: "28rem"}}>
-            <Card>
-            </Card>
-            <Card fg={1} responsive>
-                <Typography variant="body1" sx={{fontSize: '2rem', fontFamily: 'VT323'}}>
-                    Releases
-                </Typography>
-                <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: 20}}>
-                    {releases.map((release, idx) => {
-                        return (
-                            <Box key={idx} sx={{alignItems: "center", display: "flex", columnGap: 2}}>
-                                <Box >
-                                    <img src={release.image} alt={release.releaseName} height={"150rem"}/>
-                                </Box>
-                                <Box>
-                                    <Typography variant="body1" sx={{fontSize: '1.5rem', fontFamily: 'VT323'}}>
-                                    {release.artists.map((art) => (art.name))} - {release.releaseName}
-                                    </Typography>
-                                    <Typography variant="body2" sx={{fontSize: '1.5rem', fontFamily: 'VT323'}}>
-                                        {release.releaseDate.toLocaleDateString()}
-                                    </Typography>
-                                </Box>
-                            </Box>
-                        )
-                    }
-                    )}
-                </Box>
-            </Card>
-            <Card>
-            </Card>
-        </Stack>
+        <div style={{display: 'grid', gap: 9}} id={"contentParent"}>
+            <Routes>
+                <Route path="/" element={<MainElement />} />
+                <Route path="/home" element={<Navigate to={"/"} />} />
+                <Route path="/listen" element={<Redirect red={"music"} />} />
+                <Route path="/code" element={<Redirect red={"code"} />} />
+                <Route path="/about" element={<AboutElement />} />
+            </Routes>
+            <div style={{display: "grid", gridTemplateRows: "auto 1fr auto", gap: 10}}>
+                <iframe src="https://discord.com/widget?id=836868239794765865&theme=dark" width="100%" height="500" allowTransparency frameBorder={0} sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                
+                <Card>
+                    <div style={{display: "grid", placeItems: "center", minHeight: "5rem"}}>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7161282579203057" crossOrigin="anonymous"></script>
+                    
+                        <Typography variant="body1" sx={{fontSize: '1.2rem', fontFamily: 'VT323'}}>
+                            Oopsie... There should be an AD
+                        </Typography>
+                    </div>
+                </Card>
+
+                <Card>
+                    <div style={{display: "grid", placeItems: "center", minHeight: "5rem", maxHeight: "10rem"}}>
+                        <Typography variant="body1" sx={{fontSize: '1.2rem', fontFamily: 'VT323'}}>
+                            Copyright 2023 - Jaroslav Maša
+                        </Typography>
+                    </div>
+                </Card>
+            </div>
+        </div>
     )
 }
 

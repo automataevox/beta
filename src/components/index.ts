@@ -1,8 +1,5 @@
 export { default as NavbarComponent } from './NavbarComponent'
 export { default as FileNavigation } from './FileNavigation'
 export { default as AboutElement } from './AboutElement'
-export { default as AboutContent } from './AboutContent'
 export { default as MainContent } from './MainContent'
 export { default as MainElement } from './MainElement'
-export { default as ShopContent } from './ShopContent'
-export { default as ShopElement } from './ShopElement'
