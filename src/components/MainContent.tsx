@@ -22,9 +22,10 @@ const Content = () => {
                 
                 <Card>
                     <div style={{display: "grid", placeItems: "center", minHeight: "5rem"}}>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7161282579203057"
-     crossorigin="anonymous"></script>
-                    
+                        <ins className="adsbygoogle" style={{display: "block"}} data-ad-client="ca-pub-7161282579203057" data-ad-slot="6927306129" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                     </div>
                 </Card>
 
